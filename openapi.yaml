@@ -18,6 +18,10 @@ info:
 servers:
   - url: https://fantasy.premierleague.com/api
     description: Production FPL game API
+# Every operation below is public and unauthenticated. An explicit empty
+# global `security` says so unambiguously, rather than leaving it unstated;
+# `/me/` overrides it with the session cookie it actually requires.
+security: []
 tags:
   - name: Game data
     description: Static and live game-wide data — players, teams, gameweeks, fixtures
